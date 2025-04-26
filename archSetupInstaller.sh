@@ -13,8 +13,12 @@ is_arch_based() {
 is_arch_based
 
 check_packages() {
-  local packages=("yay" "waybar")
+  local packages=()
   local missing=()
+
+  while IFS= read -r pkg; do
+    packages+=("$pkg")
+  done <"packages.txt"
 
   for pkg in "${packages[@]}"; do
     if ! pacman -Qi "$pkg" &>/dev/null; then
