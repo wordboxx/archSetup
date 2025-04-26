@@ -17,7 +17,8 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock#date"
+        "clock",
+        "date"
     ],
     "modules-right": [
         "network",
