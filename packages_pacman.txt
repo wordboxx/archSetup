@@ -1,0 +1,6 @@
+nvim
+yay
+flatpak
+waybar
+nnn
+vlc
