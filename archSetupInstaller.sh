@@ -1,5 +1,14 @@
 #!/bin/bash
 
+update_system() {
+  # Update the system
+  echo "Updating the system..."
+  sudo pacman -Syu || {
+    echo "Failed to update the system. Please check your internet connection."
+    exit 1
+  }
+}
+
 is_arch_based() {
   # Checks if the system is Arch-based
   if grep -q '^ID_LIKE=*arch*' /etc/os-release; then
@@ -57,6 +66,7 @@ install_packages_flatpak() {
   done
 }
 
+update_system
 is_arch_based
 install_packages_pacman
 install_packages_flatpak
