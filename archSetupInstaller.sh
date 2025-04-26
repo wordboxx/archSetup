@@ -53,10 +53,9 @@ install_packages_flatpak() {
   done <"packages_flatpak.txt"
 
   # Loops through packages array
-  # If package is not installed, add it to missing array
   for pkg in "${packages[@]}"; do
-    if ! flatpak list | grep -q "$pkg"; then
-      sudo flatpak install "$pkg" || {
+    if ! flatpak list --app --columns=application | grep -Fxq "$pkg"; then
+      sudo flatpak install -y --noninteractive flathub "$pkg" || {
         echo "Failed to install $pkg. Please check the package name or your internet connection."
         exit 1
       }
