@@ -1,4 +1,4 @@
-nvim
+neovim
 yay
 flatpak
 waybar
