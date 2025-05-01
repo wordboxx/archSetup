@@ -4,3 +4,4 @@ no_actions=false
 term=alacritty
 mode=drun
 --show
+insensitive=true
