@@ -3,4 +3,9 @@ yay
 flatpak
 waybar
 nnn
-vlc
+mpv
+lazygit
+fzf
+nodejs
+npm
+librewolf-bin

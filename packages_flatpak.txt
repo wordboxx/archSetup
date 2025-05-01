@@ -1,1 +1,3 @@
 com.protonvpn.www
+org.onlyoffice.desktopeditors
+io.gitlab.librewolf-community
